@@ -114,10 +114,10 @@ nav {
   opacity: 1;
   transform: rotate(-45deg) translateY(100%);
 }
-.tooltip {
+.tooltip2 {
   position: relative;
 }
-.tooltip .tooltiptext {
+.tooltip2 .tooltiptext2 {
   visibility: hidden;
   background-color: white;
   color: #000;
@@ -136,7 +136,89 @@ nav {
   padding: 1px 5px 1px 5px;
 }
 
-.tooltip:hover .tooltiptext {
+.tooltip2:hover .tooltiptext2 {
   visibility: visible;
   opacity: 1;
+}
+.tooltip1 {
+  position: relative;
+}
+.tooltip1 .tooltiptext1 {
+  visibility: hidden;
+  background-color: white;
+  color: #000;
+  text-align: center;
+  border-radius: 5px;
+  font-size: medium;
+  position: absolute;
+  padding: 2px;
+  top: 100%;
+  left: 50%;
+  margin-left: 53px; /* space between icon and tooltip */
+
+  opacity: 0;
+  transition: opacity 1s;
+  z-index: 10;
+}
+
+.tooltip1:hover .tooltiptext1 {
+  visibility: visible;
+  opacity: 1;
+}
+.tooltip1:hover .tooltiptext1 {
+  visibility: visible;
+  opacity: 1;
+}
+.tooltip3 {
+  position: relative;
+}
+.tooltip3 .tooltiptext3 {
+  visibility: hidden;
+  background-color: white;
+  color: #000;
+  text-align: center;
+  border-radius: 5px;
+  font-size: medium;
+  position: absolute;
+  padding: 2px;
+  top: 100%;
+  left: 50%;
+  margin-left: -46px;
+
+  opacity: 0;
+  transition: opacity 1s;
+  z-index: 10;
+}
+
+.tooltip3:hover .tooltiptext3 {
+  visibility: visible;
+  opacity: 1;
+}
+.Discord {
+  width: 2rem;
+  height: 36.56px;
+  filter: invert();
+  margin-left: 2rem;
+}
+
+.Discord::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+
+  transform: rotate(-45deg);
+  transition: all 1s ease;
+  opacity: 0;
+}
+
+.Discord:hover {
+  transform: scale(1.2);
+}
+
+.Discord:hover::before {
+  opacity: 1;
+  transform: rotate(-45deg) translateY(100%);
 }
