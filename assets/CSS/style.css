@@ -10,7 +10,6 @@ body {
   left: 0;
   top: 0;
 }
-
 .image {
   width: 100%;
   height: auto;
@@ -23,7 +22,7 @@ body {
 }
 
 .background:hover .overlay {
-  opacity: 1;
+  opacity: 0.2;
 }
 
 .overlayedimage {
@@ -236,6 +235,7 @@ nav {
   align-items: flex-start;
 }
 .main-header h1 {
+  padding-top: 90px;
   margin: 0;
   font-size: 8rem;
   font-weight: 50;
@@ -257,6 +257,7 @@ nav {
   width: fit-content;
   max-width: 0;
   font-size: 8rem;
+  background: #ef2b7b;
 }
 @keyframes typing {
   from {
@@ -270,4 +271,7 @@ nav {
   50% {
     border-color: transparent;
   }
+}
+::selection {
+  background-color: #ef2b7b;
 }

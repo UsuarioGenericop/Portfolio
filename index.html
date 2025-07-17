@@ -14,6 +14,47 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;500&display=swap" rel="stylesheet" />
     <link rel="icon" type="image" href="./assets/imgs/favicon/favicon.ico" />
+    <style>
+        .spotlight {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 10;
+            transition: opacity 5s;
+            opacity: 0;
+            /* The background will be set dynamically by JS */
+        }
+
+        .background {
+            position: relative;
+            height: 100vh;
+            width: 100%;
+        }
+
+        .background-spotlight {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1;
+            opacity: 0;
+            transition: opacity 3s;
+            /* background will be set by JS */
+        }
+
+        .image {
+            display: block;
+            width: 100%;
+            height: auto;
+            position: relative;
+            z-index: 0;
+        }
+    </style>
 </head>
 
 <body>
@@ -61,6 +102,7 @@
                 </div>
             </header>
             <img src="./assets/imgs/BackgroundImage.jpg" alt="BackgroundImage" class="image">
+            <div class="background-spotlight"></div>
             <div class="overlay">
                 <img src="./assets/imgs/BackgroundImage.jpg" alt="BackgroundImage" class="overlayedimage">
             </div>
@@ -68,6 +110,49 @@
 
     </div>
 
+    <script>
+        const bg = document.querySelector('.background');
+        const spotlight = bg.querySelector('.background-spotlight');
+        let fadeTimeout = null;
+
+        function updateSpotlight(e) {
+            const rect = bg.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            spotlight.style.background = 'radial-gradient(circle 1500px at ' + x + 'px ' + y + 'px, rgba(239, 43, 123,0.11) 0%, rgba(0,0,0,0.50) 80%)';
+            spotlight.style.opacity = 1;
+            // If the user moves the mouse back in, cancel any pending fade out
+            if (fadeTimeout) {
+                clearTimeout(fadeTimeout);
+                fadeTimeout = null;
+            }
+        }
+
+        bg.addEventListener('mousemove', updateSpotlight);
+
+        bg.addEventListener('mouseenter', () => {
+            spotlight.style.opacity = 1;
+            if (fadeTimeout) {
+                clearTimeout(fadeTimeout);
+                fadeTimeout = null;
+            }
+        });
+
+        bg.addEventListener('mouseleave', () => {
+            // Wait 1.5 seconds before fading out
+            fadeTimeout = setTimeout(() => {
+                spotlight.style.opacity = 0;
+            }, 1500);
+        });
+
+        // Ensure overlay always matches background size (in case of dynamic resizing)
+        const resizeSpotlight = () => {
+            spotlight.style.width = bg.offsetWidth + 'px';
+            spotlight.style.height = bg.offsetHeight + 'px';
+        };
+        window.addEventListener('resize', resizeSpotlight);
+        resizeSpotlight();
+    </script>
 </body>
 
 </html>
