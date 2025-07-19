@@ -185,7 +185,6 @@ nav {
   top: 100%;
   left: 50%;
   margin-left: -46px;
-
   opacity: 0;
   transition: opacity 1s;
   z-index: 10;
@@ -210,7 +209,6 @@ nav {
   left: -50%;
   width: 200%;
   height: 200%;
-
   transform: rotate(-45deg);
   transition: all 1s ease;
   opacity: 0;
@@ -279,6 +277,11 @@ nav {
 }
 ::selection {
   background-color: #ef2b7b;
+}
+.GitHub::selection,
+.E-mail::selection,
+.Discord::selection {
+  background-color: #10d484;
 }
 .Nationality {
   display: flex;
