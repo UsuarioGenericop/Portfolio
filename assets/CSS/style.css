@@ -45,6 +45,7 @@ ul {
   list-style-type: none;
   display: flex;
   flex-direction: row;
+  display: flexbox;
 }
 nav {
   z-index: 2;
@@ -60,6 +61,7 @@ nav {
   overflow: hidden;
   position: fixed;
   top: 0%;
+  display: flex;
 }
 .GitHub {
   width: 2rem;
@@ -196,6 +198,7 @@ nav {
   height: 36.56px;
   filter: invert();
   margin-left: 2rem;
+  display: flexbox;
 }
 
 .Discord::before {
@@ -274,6 +277,7 @@ nav {
 }
 ::selection {
   background-color: #ef2b7b;
+  filter: none;
 }
 .Nationality {
   display: flex;
@@ -281,13 +285,14 @@ nav {
   position: absolute;
   text-align: left;
   top: 0;
-
+  overflow: hidden;
+  white-space: nowrap;
   background: none;
   color: #fff;
   z-index: 10;
   font-family: "Raleway", sans-serif;
   padding-left: 355px;
-  margin-top: 115px;
+  padding-top: 115px;
   align-items: flex-start;
 }
 .Nationality p {
@@ -298,6 +303,9 @@ nav {
   font-weight: 50;
   width: auto;
   padding-right: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  width: fit-content;
 }
 .Colombia {
   text-align: left;
@@ -312,4 +320,9 @@ nav {
   padding-top: 400px;
   margin: 0;
   font-size: 1.3rem;
+}
+.Nationality img {
+  height: 25px;
+  padding-top: 400px;
+  margin: 0;
 }
