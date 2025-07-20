@@ -231,15 +231,15 @@ nav {
   color: #fff;
   z-index: 10;
   font-family: "Raleway", sans-serif;
-  left: 355px;
-  top: 115px;
+  left: 430px;
+  top: 230px;
   align-items: flex-start;
   width: fit-content;
 }
 .main-header h1 {
   top: 90px;
   margin: 0;
-  font-size: 8rem;
+  font-size: 10rem;
   font-weight: 50;
   margin-right: 30px;
   width: fit-content;
@@ -254,21 +254,13 @@ nav {
   font-weight: 600;
   overflow: hidden;
   white-space: nowrap;
-  border-right: 1px solid;
-  animation: typing 3s steps(27) forwards, blink 1s step-end infinite;
   text-align: left;
   width: fit-content;
-  max-width: 0;
+  max-width: 100vw;
   font-size: 8rem;
   background: #ef2b7b;
-}
-@keyframes typing {
-  from {
-    max-width: 0;
-  }
-  to {
-    max-width: 100vw; /* or a large enough value to fit your text */
-  }
+  border-right: 1px solid;
+  animation: blink 1s step-end infinite;
 }
 @keyframes blink {
   50% {
@@ -295,8 +287,8 @@ nav {
   color: #fff;
   z-index: 10;
   font-family: "Raleway", sans-serif;
-  left: 355px;
-  top: 415px;
+  left: 430px;
+  top: 580px;
   align-items: flex-start;
 }
 .Nationality p {
@@ -312,7 +304,6 @@ nav {
 .Colombia {
   text-align: left;
   font-weight: 500;
-
   background: none;
   color: #fff;
   z-index: 10;
