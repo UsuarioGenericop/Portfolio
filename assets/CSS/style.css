@@ -318,3 +318,53 @@ nav {
   top: 300px;
   margin: 0;
 }
+
+.scroll-indicator {
+  position: absolute;
+  transform: translateX(-50%);
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  left: 50%;
+  bottom: 0%;
+  animation: bob 1.2s infinite alternate cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.scroll-indicator p {
+  color: #fff;
+  font-size: 1rem;
+  letter-spacing: 0.2em;
+  margin-bottom: 0px;
+  border-radius: 8px;
+  opacity: 0.8;
+  padding-bottom: 0px;
+}
+
+@keyframes bob {
+  0% {
+    transform: translateX(-50%) translateY(0);
+  }
+  100% {
+    transform: translateX(-50%) translateY(-18px);
+  }
+}
+
+.scroll-bar {
+  width: 2px;
+  height: 28px;
+  background: #fff;
+  opacity: 0.6;
+  margin-top: 6px;
+  border-radius: 1px;
+  animation: bar-bob 1.2s infinite alternate cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes bar-bob {
+  0% {
+    transform: scaleY(1);
+  }
+  100% {
+    transform: scaleY(0.7);
+  }
+}

@@ -60,59 +60,65 @@
 <body>
     <div class="body">
         <div class="background">
-            <nav class="nav-on-bg">
-                <ul>
-
-                    <li>
-                        <div class="tooltip1">
-                            <a href="https://github.com/UsuarioGenericop" target="_blank"><img
-                                    src="./assets/imgs/square-github-brands.svg" alt="GitHub" class="GitHub"></a>
-                            <span class="tooltiptext1">
-                                UsuarioGenericop
-                            </span>
-                        </div>
-                    </li>
-
-                    <li>
-                        <div class="tooltip2">
-                            <a href="https://mail.google.com/mail/u/0/#inbox" target="_blank"><img
-                                    src="./assets/imgs/envelope-solid.svg" alt="E-mail" class="E-mail"></a>
-                            <span class="tooltiptext2">
-                                andydquintero@gmail.com
-                            </span>
-                        </div>
-                    </li>
-
-                    <li>
-                        <div class="tooltip3">
-                            <a href="https://discord.com/users/783500266267213834" target="_blank"><img
-                                    src="./assets/imgs/discord.svg" alt="Discord" class="Discord"></a>
-                            <span class="tooltiptext3">
-                                Cherrygum.com
-                            </span>
-                        </div>
-                    </li>
-                </ul>
-            </nav>
-            <header class="main-header">
-                <h1>I am a</h1>
-                <div class="header-p">
-                    <p>Developer</p>
-                </div>
-            </header>
-            <div class="Nationality">
-                <p>Brought to you from&nbsp;</p>
-                <div class="Colombia">Colombia&nbsp;</div>
-                <img src="./assets/imgs/colombia.png" alt="Colombia">
-            </div>
             <img src="./assets/imgs/BackgroundImage.jpg" alt="BackgroundImage" class="image">
             <div class="background-spotlight"></div>
             <div class="overlay">
                 <img src="./assets/imgs/BackgroundImage.jpg" alt="BackgroundImage" class="overlayedimage">
             </div>
         </div>
+        <nav class="nav-on-bg">
+            <ul>
+
+                <li>
+                    <div class="tooltip1">
+                        <a href="https://github.com/UsuarioGenericop" target="_blank"><img
+                                src="./assets/imgs/square-github-brands.svg" alt="GitHub" class="GitHub"></a>
+                        <span class="tooltiptext1">
+                            UsuarioGenericop
+                        </span>
+                    </div>
+                </li>
+
+                <li>
+                    <div class="tooltip2">
+                        <a href="https://mail.google.com/mail/u/0/#inbox" target="_blank"><img
+                                src="./assets/imgs/envelope-solid.svg" alt="E-mail" class="E-mail"></a>
+                        <span class="tooltiptext2">
+                            andydquintero@gmail.com
+                        </span>
+                    </div>
+                </li>
+
+                <li>
+                    <div class="tooltip3">
+                        <a href="https://discord.com/users/783500266267213834" target="_blank"><img
+                                src="./assets/imgs/discord.svg" alt="Discord" class="Discord"></a>
+                        <span class="tooltiptext3">
+                            Cherrygum.com
+                        </span>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+        <header class="main-header">
+            <h1>I am a</h1>
+            <div class="header-p">
+                <p>Developer</p>
+            </div>
+        </header>
+        <div class="Nationality">
+            <p>Brought to you from&nbsp;</p>
+            <div class="Colombia">Colombia&nbsp;</div>
+            <img src="./assets/imgs/colombia.png" alt="Colombia">
+        </div>
+        <div class="scroll-indicator">
+            <p>SCROLL</p>
+            <div class="scroll-bar"></div>
+        </div>
 
     </div>
+
+
 
     <script>
         const bg = document.querySelector('.background');
@@ -160,7 +166,7 @@
     <script>
         // Typing and deleting effect for the header, alternating between 'Developer' and 'Engineer'
         const headerP = document.querySelector('.main-header p');
-        const texts = ["Developer", "Engineer", "Designer"];
+        const texts = ["Developer", "Software Engineer", "Designer", "Programmer"];
         let textIndex = 0;
         let i = 0;
         let isDeleting = false;
@@ -191,6 +197,7 @@
         // Start the effect
         typeWriter();
     </script>
+
 </body>
 
 </html>
